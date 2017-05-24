@@ -1,0 +1,166 @@
+<!-- BEGAIN PRELOADER -->
+    <!-- <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div> -->
+    <!-- END PRELOADER -->
+
+<!-- Breadcrums start -->
+<section id="blogArchive">      
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="blog-breadcrumbs-area">
+            <div class="container">
+              <div class="blog-breadcrumbs-left">
+                <h2>Reviews</h2>
+              </div>
+              <div class="blog-breadcrumbs-right">
+                <ol class="breadcrumb">
+                  
+                  <li>You are here</li>
+                   <li><a href="#">Home</a></li>                  
+                  <li class="active">Reviews</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>      
+</section>    
+<!-- Breadcrums end -->
+
+<div class="container">
+
+      <% if user_signed_in? %>
+
+          
+          
+            <%= link_to  new_review_path, class: "btn btn-primary btn-sm" do %>
+              <i class="glyphicon glyphicon-plus "></i> Add Review
+            <% end %>
+           <strong> <button type="button" class="btn-xs pull-right"  >Welcome <%= current_user.username.capitalize %> Add Your Review</button></strong>
+       <% else %>
+<p class="bg-primary"></p>
+       <!-- Trigger the modal with a button -->
+
+<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"> Add Your Review</button>  
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <strong><h4 class="modal-title">Welcome To Neowomb</h4></strong>
+      </div>
+      <div class="modal-body", style="text-align:center">
+       <!--  <h2><button type="button" class="btn btn-danger" data-dismiss="modal"><a href new_user_registration_path >Continue with Facebook</a></button></h2> -->
+       
+
+        <%= link_to  "/auth/facebook", class: "btn btn-primary" ,id: "sign_in" do %>Continue with Facebook
+        <i class="glyphicon glyphicon-edit"></i> 
+        <% end %><br/><br/>
+        <%= link_to  "https://twitter.com", class: "btn btn-primary " do %>Continue with Twitter
+        <i class="glyphicon glyphicon-edit"></i> 
+        <% end %><br/><br/>
+        <!-- Facebook Box Part Start-->
+        <!-- <div id="facebook" class="part3">
+        <h3>Join us on Facebook</h3>
+        <div class="fb-page" data-href="http://www.facebook.com/dctacademy.bangalore" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"></div></div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      </div> -->
+              <!-- Facebook Box Part End-->
+        <!-- Twitter Feeds Part Start-->
+        <!-- <div id="twitter_footer" class="part3">
+          <h3>Twitter Feed</h3>
+          <div class="twitter_footer">
+<a class="twitter-timeline" href="https://twitter.com/dct_academy" data-chrome="noheader nofooter noborders transparent" data-theme="dark" data-height="250"  data-related="twitterapi,twitter" data-aria-polite="assertive" data-widget-id="347621595801608192">Tweets by @harnishdesign</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+        </div> -->
+        <!-- Twitter Feeds Part End-->
+        <!-- <p><button type="button" class="btn btn-info" data-dismiss="modal"><a href new_user_registration_path >Continue with Google</a></button></p>
+        <h5>or</h5>
+         <p style="text-align:center">Or use your email address</p> -->
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-info" data-dismiss="modal"></button> -->
+        <!-- <h4 class="modal-title"> <li><%# link_to "Registraion", new_user_registration_path %></li></h4>
+         <h4 class="modal-title"> <li><%# link_to "Login", new_user_session_path %></li></h4> -->
+        <!--  <h3> <button type="button" class="btn btn-info" data-dismiss="modal"><a href new_user_registration_path >Registration</a></button></h3>
+          <h3><button type="button" class="btn btn-info" data-dismiss="modal"><a href new_user_session_path >Login</a></button></h3>
+           <button type="button" class="btn btn-info" data-dismiss="modal"><%# link_to "Signup", new_user_registration_path %></button>
+         <button type="button" class="btn btn-info"><span><li><%# link_to "Login", new_user_session_path %></li></span></button> -->
+          <!-- <h4> <li><%# link_to "Signup", new_user_registration_path %></li>
+           <li><%# link_to "Login", new_user_session_path %></li></h4> -->
+          <!-- <strong> <p style="text-align:center">Or use your email address</p></strong> -->
+           <%= link_to  new_user_session_path, class: "btn btn-primary btn-xs" do %>Login
+                    <i class="glyphicon glyphicon-edit"></i> 
+            <% end %>
+            <%= link_to  new_user_registration_path, class: "btn btn-primary btn-xs" do %>Signup
+                    <i class="glyphicon glyphicon-edit"></i> 
+            <% end %>
+
+
+<!-- <div class="col-md-10">
+            <form class="button_to" method="get" action="/users/sign_in"> -->
+            <!--  <input class="btn btn-info" type="submit" value="Login"> </form>-->
+                <!-- <input class="btn btn-info" type="submit" data-toggle="modal" data-target="#myModal" value="Login">
+
+           </form>  -->
+           <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> -->
+
+<!-- <div class="col-md-2">
+             <form class="button_to" method="get" action="/users/sign_up">
+                <input class="btn btn-info" type="submit" value="Signup"> 
+            </form>
+</div>
+</div> -->
+
+
+
+          
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+        <strong>  <div class="page-header"></strong>
+        
+        
+           <% @reviews.each do |review| %>
+              <div class="thumbnail">
+              <div class=container >
+
+             <!-- Rating- <button type="button" class="btn btn-primary"><%= review.rating%>-</button>-<%= review.comment %> -->
+             
+             <strong>Rating <button type="button" class=" btn-xs"><%= review.rating%></button></strong>--<%= review.comment %><br/>
+             <strong  class=" pull-right"  %>--------- <%= review.user.username.capitalize %> </strong><br/><br/>
+              </div>
+              <% if can? :update, review %>
+                  <%= link_to  edit_review_path(review), class: "btn btn-primary btn-xs" do %>Edit Review
+                    <i class="glyphicon glyphicon-edit"></i> 
+                  <% end %>
+              <% end %> 
+
+            
+                   <% if can? :destroy, review %> 
+                      <%= link_to review_path(review), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger btn-xs" do %>Delete Review
+                          <i class="glyphicon glyphicon-trash"></i> 
+                        <% end %><br/>
+                  <% end %>
+               </div> 
+            <% end %>
+       
+      </div>
+       

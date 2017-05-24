@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/> -->
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Pediatric Health Care center">
+    <meta name="author" content="NEOWOMB HEALTH CARE PRIVATE LIMITED"> 
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  <title>NeoWombHealthCarePvtLtd</title> -->
+     <title>NeoWombHealthCarePvtLtd</title>
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--    <%# stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ -->
+    
+    <%= stylesheet_link_tag    'application' %>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="images/icon" href="../images/favicon.ico"/>
+
+
+
+
+
+    <!--JS Files Loading -->
+    
+    <!-- jQuery Library  -->
+    <script src="/js/jquery.js"></script>    
+    <!-- Bootstrap default js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Photo Swipe Gallery Slider -->
+    <script src="js/photoswipe-gallery.js"></script>
+    <script src='/js/photoswipe.min.js'></script>
+    <script src='js/photoswipe-ui-default.min.js'></script>    
+    
+
+      <!-- slick slider -->
+    <script src="/js/slick.min.js"></script>    
+    <script type="text/javascript" src="/js/modernizr.custom.79639.js"></script>    
+    <!-- counter -->
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <!-- Doctors hover effect -->
+    <script src="/js/snap.svg-min.js"></script>
+    <script src="/js/hovers.js"></script>
+    <script src="/js/custom.js"></script>
+ <!--    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkXIsMM7Ao8sV9p9SC9Jw2Hq4PiaCCj44&callback=initMap" async="" defer="defer" type="text/javascript"></script> -->
+    
+    <!-- Custom JS -->
+    
+    <!--JS Files Loading-->
+    
+    
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">       
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">    
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Google Fonts (Droid Sans) Start -->
+<link href='//fonts.googleapis.com/css?family=Droid+Sans&v1' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=&v1' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+<!-- Google Fonts (Droid Sans) End -->
+
+   <!-- <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Online e-commerce store">
+  <meta name="author" content="DCT Academy"> -->
+  <%# stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+   
+ 
+
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+	
+	<!-- BEGAIN PRELOADER -->
+    <!-- <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div> -->
+    <!-- END PRELOADER -->
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <%= render '/layouts/navigation' %>
+
+
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+	<%= yield %>
+	<%= render '/layouts/footer' %>
+
+    
+    <%= javascript_include_tag 'application' %> 
+<!-- 	<%# javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+</body>
+</html>

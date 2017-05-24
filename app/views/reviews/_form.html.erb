@@ -1,0 +1,274 @@
+
+<style>
+      .progress{
+    height: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+</style> 
+
+
+<%= form_for @review do |f| %>
+<% if @review.errors.any? %>
+ <div class="alert alert-danger">
+   <h3>These errors phohibitted the form from being saved: </h3>
+   <ul>
+    <% @review.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+   </ul>
+  </div>
+ <% end %>
+
+
+
+<!-- .progress{
+    height: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+} -->
+
+      <%# f.hidden_field :service_id, value: @service.id %>
+<section id="blogArchive"> 
+      <div class="form-group">
+      <%= f.label :Comment %>
+      <%= f.text_area :comment, class: "form-control" %><br/>
+      </div>
+
+
+      <div class="form-group">
+      <%= f.label :rating%>
+
+        <label class="radio-inline">
+          <%= f.radio_button :rating, "1"%> 1 
+        </label>
+
+        <label class="radio-inline">
+        <%= f.radio_button :rating, "2"%> 2 
+        </label>
+
+
+
+        <label class="radio-inline">
+        <%= f.radio_button :rating, "3"%> 3
+        </label>
+
+        
+        <label class="radio-inline">
+        <%= f.radio_button :rating, "4"%> 4
+        </label>
+
+        <label class="radio-inline">
+        <%= f.radio_button :rating, "4.5"%> 4.5
+        </label>
+
+        <label class="radio-inline">
+        <%= f.radio_button :rating, "5"%> 5 <br/>
+        </label><br/>
+
+      <%= f.submit "Add the comment", class: "btn btn-info" %>
+    
+  <% end %> <br/>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <div class="col-s-14">
+ -->
+    <!--
+
+     Rating Widget 
+
+    -->
+    <!-- <div class="ui segment res-rating-widget mbot" style="">
+        <div class="restaurant-rating-widget">
+            <div class="review-rating-widget your-rating rating-widget rating-widget-res_51523" data-review_id="" data-rating-for="restaurant" data-res_id="51523">
+                <div class="your-rating-info grey-text mbot0 ttupper bold" tabindex="0"></div>
+                <div class="">
+                    <div id="review-form" class="rating-widget-stars left mr10" data-za-intent="raterestaurant.post" data-za-event="click">
+                        <div class="rating-cls user_stars2_0" data-rating="0" data-originalclass="user_starssel_0">
+
+    <a class="level-1 level-0" data-original-title="1.0" data-hover-rating="1.0" data-num="2" href="#" aria-label="1.0"></a>
+
+<a class="level-2 level-0" data-original-title="1.5" data-hover-rating="1.5" data-num="3" href="#" aria-label="1.5"></a>
+
+<a class="level-3 level-0" data-original-title="2.0" data-hover-rating="2.0" data-num="4" href="#" aria-label="2.0"></a>
+
+<a class="level-4 level-0" data-original-title="2.5" data-hover-rating="2.5" data-num="5" href="#" aria-label="2.5"></a>
+
+<a class="level-5 level-0" data-original-title="3.0" data-hover-rating="3.0" data-num="6" href="#" aria-label="3.0"></a>
+
+<a class="level-6 level-0" data-original-title="3.5" data-hover-rating="3.5" data-num="7" href="#" aria-label="3.5"></a>
+
+<a class="level-7 big rating-sel level-0" data-original-title="4.0" data-hover-rating="4.0" data-num="8" href="#" aria-label="4.0"></a>
+
+<a class="level-8 big level-0" data-original-title="4.5" data-hover-rating="4.5" data-num="9" href="#" aria-label="4.5"></a>
+
+<a class="level-9 big bigger level-0" data-original-title="5.0" data-hover-rating="5.0" data-num="10" href="#" aria-label="5.0"></a>
+
+                    </div>
+                </div>
+                <div class="rating-top pt5"></div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>-->
+<!--
+
+ /Rating Widget 
+
+-->
+
+<!--
+
+ Review Textarea 
+
+-->
+<!--
+<div class="clearfix mbot pos-relative" style="padding: 0;">
+
+    ::before
+    <div id="review-form-textarea-id" class="review-form-textarea right brtop" contenteditable="true" style="min-height: 100px; color: rgb(211, 211, 211);" aria-multiline="true" role="textbox"></div>
+
+                                                        <div id="review-length-error-message"></div>
+                                                        ::after
+                                                    </div>-->
+                                                    <!--
+
+                                                     /Review Textarea 
+
+                                                    -->
+                                                    <!--
+
+                                                     Blog URL 
+
+                                                    -->
+                                                    <!--
+
+                                                     /Blog URL 
+
+                                                    -->
+                                                    <!--
+
+                                                     Tags 
+
+                                                    -->
+                                                    <div class="row clearfix"></div>
+                                                    <!--
+
+                                                     /Tags 
+
+                                                    -->
+                                                    <!--
+                                                    <div class="ui segment review-photos hidden " data-is_res_page="" data-review_id="0"></div>
+                                                    
+
+                                                     Footer 
+
+                                                    
+                                                    <div class="clearfix mtop0 row"></div>
+                                                    <div class="review-form-error-message error-message-highlight hidden mtop0 ui error message"></div>
+                                                    <div class="review-error-msg-container mtop review-err-msg hidden ui error message"></div>-->
+                                                    <!--
+
+                                                     /Footer 
+
+                                                    -->
+                                                    <!--
+                                                </div>
+                                                ::after
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-form-success-message error-message-highlight hidden mtop"></div>
+                                    ::after
+                                </div>
+                                ::after
+                            </div>
+                        </div>
+                    </div>
+                    ::after
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="res-review-tab-content-container">
+
+    <div class="res-review-tab-content activity-tab active">
+        <div class="activity-feed-container">
+            <div id="ipadding-reviews-box" class=" ipadding p-relative reviews res-review-form-container review_message_container">
+                <div id="reviews-container" class="zs-load-more-container" data-filter="reviews-top">
+                    <div class="notifications-content">
+                        <div class="clearfix reviews-subhead pt15 ui segments white-bg mbi"></div>
+                        <div class="res-reviews-container"></div>
+
+<div class="res-reviews-container res-reviews-area">
+
+    <div class="zs-following-list">
+        <script type="application/javascript"></script>
+        <div>
+            <div class=" ui segments res-review-body res-review clearfix js-activity-root mbti item-to-hide-parent stupendousact" data-res_id="51523" data-snippet="restaurant-review" data-review_id="29823028">
+
+        ::before
+        <div class="ui segment clearfix br0 ">
+            ::before
+            <div class="review-header-text mbot0"></div>
+            <div class="ui warning message error-message-highlight review-message hidden mbot"></div>
+            <div class="ui item clearfix ">
+                ::before
+                <div class="item">
+                    <div class="clearfix mb10 ">
+                        ::before
+                        <div class="res-large-snippet ui horizontal list col-s-16 ">
+                            <div class="item col-s-16">
+                                <a href="https://www.zomato.com/users/chandana-p-35408884"></a>
+                                -->
+                                <!--
+
+                                      
+
+                                -->
+                                <!--z
+                                <div class="content col-l-11 large-snippet ml5 mt5"></div>
+                                ::after
+                            </div>
+                        </div>
+                        ::after
+                    </div>
+                </div>
+                <div class="fs12px pbot0 clearfix"></div>
+                ::after
+            </div>
+            <div class="rev-text mbot0 " style="line-height: 20px;" tabindex="0"></div>
+            <div class="photosContainer parentPhotoBox mtop0 mbot0 thumbsContainer"></div>
+            <div id="restaurant_review_actions_29823028"></div>
+            ::after
+        </div>
+        <div id="restaurant_review_owner_comment_thread_29823028"></div>
+        <div id="restaurant_review_comment_thread_29823028"></div>
+        ::after
+    </div>
+
+</div> -->
